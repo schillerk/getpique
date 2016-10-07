@@ -1,0 +1,251 @@
+<html lang = "en">
+<head>
+<title>Pique</title>
+
+ <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ >
+
+<!-- Latest compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!-- Latest compiled and minified  Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+<!-- font awesome font for social icons -->
+<script src="https://use.fontawesome.com/c478d977aa.js"></script>
+<!-- Material Icon font -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- My styles -->
+<link rel="stylesheet" href="materialize.css">
+<link rel="stylesheet" href="common.css">
+
+</head>
+<body class = "about no-fixed-header" id = "students">
+  <div class = "clearfixx">
+    <div class = "logo-container pull-left">
+      <a href ="/" alt = "Home" id = "logo"><img src = "images/Logo.png"></a>
+    </div>
+
+    <div class = "header-right pull-right">
+
+      <div class = "nav">
+        <a class = "nav-link " href = "about.html">About Us</a>
+        <a class = "nav-link " href = "educator.html">Educators</a>
+        <a class = "nav-link" href = "/applications">Register Scholarship</a>
+        <a class = "nav-link selected" href = "students.html">Students</a>
+      </div>
+
+       <a class="waves-effect waves-light btn modal-trigger" id = "login-button" href="#login">Sign Up</a>
+
+    </div>
+  </div>
+  <div class = "gradient-header">
+
+    <div class = "black-fade"></div>
+    <div class = "">
+
+      <h1>Save Time. Submit More Applications.<br>
+Increase Your Chances of Winning Scholarships.</h1>
+      <h6>We get it, there's not enough time in the day to  study for the SAT/ACTs, research and apply to colleges, keep up your grades, do community service, participate in extra-curriculars, and apply to scholarships.
+That is why, we made Pique. Sign up and see how easy it is to find and apply to scholarships!</h6>
+    </div>
+
+    <div class = "banner-form">
+      <form id = "student">
+
+        <br><br><br>
+        <div class = "select-slider-container">
+
+          <div class= "option selected" id = "educator">Sign Up!</div>
+        </div>
+        <script>
+        $('.option').on('click',function(){
+         $('.option').toggleClass('selected')
+        })
+
+        $('#career').on('click',function(){
+          $('#career').val('1').change();
+        })
+
+        $('#not-published').on('click',function(){
+          $('#career').val('0').change();
+        })
+        </script>
+        <div class = 'row name-form-group'>
+          <div class= "col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="first_name" placeholder="First Name">
+            </div>
+          </div>
+          <div class= "col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="school" placeholder="Name of School">
+        </div>
+        <div class = 'row location-form-group'>
+          <div class= "col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="city" placeholder="City">
+            </div>
+          </div>
+          <div class= "col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="state" placeholder="State">
+            </div>
+          </div>
+        </div>
+        <button type = "submit" class = "submit-button log-in"></button>
+
+      </form>
+    </div>
+  </div>
+  <script>
+    $(window).scroll(function(){
+      $(".about-header h1").css("opacity", 1 - $(window).scrollTop() / 150);
+      $(".about-header h6").css("opacity", 1 - $(window).scrollTop() / 150);
+      var scrollpos = $(window).scrollTop();
+      console.log(scrollpos)
+      if(scrollpos >257){
+        $(".about-header .black-fade").css("opacity",  (($(window).scrollTop()-257 )*0.0105));
+      }else{
+        $('.about-header .black').removeClass('fixed-header');
+        $(".about-header .black-fade").css("opacity",  0)
+      }
+      if(scrollpos >600){
+        $('.clearfixx').addClass('black-header')
+      }else{
+        $('.clearfixx').removeClass('black-header')
+      }
+  });
+  </script>
+  <div class = "works" id = "how-it-works-info">
+    <h3 class = "section-header long">Applying to Scholarships : The 3 Step Process</h3>
+    <div class = "row">
+      <div class = "col-sm-4">
+        <div class = "alt-icon" id = "one"><img src = "images/educator/glass.png"></div>
+        <h5>Find the Right Scholarships for you.</h5>
+        <h6>Before putting pen to paper, you need to
+find the 'right' scholarships, the scholarships
+that give you the highest chances of winning. </h6>
+      </div>
+      <div class = "col-sm-4">
+        <div class = "alt-icon" id = "two"><img src = "images/landing/notepad.png"></div>
+        <h5>Write an Award Winning Essay.</h5>
+        <h6>In order toactually win, you must be able to
+write a strong and compelling essay that
+differentiates you from other applicants.  </h6>
+      </div>
+      <div class = "col-sm-4">
+        <div class = "alt-icon"id = "three"><img  src = "images/educator/medal.png"></div>
+        <h5>Apply. Apply. Apply!</h5>
+        <h6>The key to winning scholarships is to apply to as many scholarships as possible. The more
+scholarships you apply to, the greater your chances
+of winning a scholarship become. </h6>
+      </div>
+    </div>
+
+  </div>
+
+
+<div class = "pique-difference">
+  <h3 class = "section-header long">The Pique Difference</h3>
+  <div class = "diff-text pull-left">
+    <h3>Scholarships You Can Actually Win</h3>
+    All platforms give you access to a curated list of scholarships. So what's 'The Pique Difference’?
+    Our scholarships are categorized into4 categories; 'local scholarships', 'national scholarships',
+    'niche national scholarships', and 'based on previous scholarships you've applied to'.<br>
+    <a href = "" class = "button filled">Why Local Scholarships?</a>
+  </div>
+  <div class = "diff-text pull-right">
+    <h3>Request and save All Your Docments in One Place</h3>
+    Through Pique you can send a request to your teachers and counselors to upload your recommendations
+ and official transcript. When each document is uploaded, it is saved onto your
+Pique account and can then be reused to apply to any scholarship on Pique.
+  </div>
+  <div class = "diff-text pull-left">
+    <h3>Reuse Essays More Easily</h3>
+    You do not have time to write a new essay for each new scholarship, we get it.
+Our recommendation feature recommends scholarships to you based on
+previous scholarships you've applied to.
+    <div class = 'essay-example'>
+      <b><i>Example</i></b><br><br>
+      If you applied to a 'Women in STEM' scholarship with a 1,000 word limit.
+Your <b>'Based on Scholarships You've Previously Applied to'</b> section would be updated
+with scholarships for Women going into STEM programs with a 1,000 word limit.
+
+    <br><br><b>Cool, huh?</b>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+  <script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - 150
+          }, 1000);
+          return false;
+        }
+      }
+    });
+    });
+  </script>
+  <footer>
+    <div class = "row footer-links">
+      <div class = "col-sm-3">
+        <a class = "footer-nav-link link-header">Company</a><br>
+        <a href = "about.html#team" class = "footer-nav-link">Team</a><br>
+        <a class = "footer-nav-link">Blog</a><br>
+        <a class = "footer-nav-link">Get Involved</a><br>
+      </div>
+      <div class = "col-sm-3">
+          <a class = "footer-nav-link link-header">Educators</a><br>
+          <a href = "educator.html" class = "footer-nav-link">Get Started</a><br>
+          <a href = "educator.html" class = "footer-nav-link">Learn More</a><br>
+      </div>
+      <div class = "col-sm-3">
+        <a class = "footer-nav-link link-header">Scholarship Foundations</a><br>
+        <a href = "about.html" class = "footer-nav-link">About</a><br>
+        <a class = "footer-nav-link">FAQ</a><br>
+        <a class = "footer-nav-link">Become a Partner</a><br>
+      </div>
+      <div class = "col-sm-3">
+        <a class = "footer-nav-link link-header">Support</a><br>
+        <a class = "footer-nav-link">FAQ</a><br>
+
+      </div>
+    </div>
+    <div class = "subfooter">
+      <div class = "pull-left">
+        <a href = "" class = "social-media"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+  </a>
+        <a href = "" class = "social-media"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href = "" class = "social-media"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+      <div class = "pull-right">
+        Copyright 2016 Pique
+      </div>
+    </div>
+  </footer>
+</body>
